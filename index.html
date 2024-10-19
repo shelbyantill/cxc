@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+     <!-- Tab Icon -->
+    <link rel="shortcut icon" href="assets/images/profile.png" type="image/x-icon">
+   
+
+    <title> Shelby Antill</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <!-- <p class="nav-name">Doe</p>
+            <span>.</span> -->
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            
+            <div class="featured-name">
+                <p>Hello world! <span></span></p>
+                <p><span class="typedText"></span></p>
+            </div>
+            
+            <div class="featured-text-btn">
+                <button class="btn">Resume<i class="uil uil-file-alt"></i></button>
+                <button class="btn blue-btn">Contact</button>
+            </div>
+            <div class="social_icons">
+                <!-- <div class="icon"><i class="uil uil-instagram"> </i></div> -->
+                <div class="icon"> <a href ="https://www.linkedin.com/in/shelbyantill/"> <i class="uil uil-linkedin-alt"></i> </a></div>
+                <div class="icon"><a href ="https://github.com/shelbyantill"><i class="uil uil-github-alt">  </i></a></div>
+                <div class="icon">
+                    <a href="https://example.com" target="_blank">
+                        <i class="uil uil-megaphone"></i> 
+                    </a>
+                </div>  
+
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/profile.png" alt="avatar">
+            </div>
+          </div>
+          
+
+       </section>
+<!-- -------------- ABOUT BOX ---------------- -->
+<section class="section" id="about">
+    <div class="top-header">
+      <h1>About Me</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="about-info">
+            <div class="spoken-icon">
+                <a href="https://www.canva.com/" target="_blank">
+                    <i class="uil uil-megaphone"></i> 
+                </a>
+            </div>  
+          <h3>Introduction</h3>
+          <p>As a senior at Louisiana State University, I am pursuing a 
+            Bachelor of Science in Computer Science with a minor in Business Administration. 
+            I am set to graduate from the College of Engineering in May 2025. 
+            I have an interest in software engineering, data science, and UI/UX design!
+            </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="education-box">
+          <div class="education-header">
+            <h3>Coursework</h3>
+
+            
+          </div>
+          <div class="education-category">
+                <button class="active">Computer Science</button>
+                <button>Business</button>
+                <button>Electives/Other</button>
+        </div>
+          
+          <div class="education-list">
+            <!-- Dynamic content will be injected here by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- -------------- Experience BOX ---------------- -->
+
+
+       <section class="section" id="experience">
+        <div class="top-header">
+          <h1>Experience</h1>
+        </div>
+        <div class = "timeline">
+
+            <div class = "experience experience-left-container">
+                <img src = "assets/images/LSU-logo.png">
+                <div class = "experience-text-box">
+                    <h2>Student Software Developer</h2>
+                    <small>Sept 2024 - Present</small>
+                    <p>Utilized C# and assisted in development of full-stack applications to produce stakeholder tools, publications, maps, and visualizations of State of Louisiana traffic data to address stakeholder’s needs and support informed decision making for traffic safety. 
+                        </p>
+                    <span class="experience-left-container-arrow"></span>
+
+                </div>
+            </div> 
+
+            <div class = "experience experience-right-container">
+                <img src = "assets/images/chevron.png">
+               
+                <div class = "experience-text-box">
+                    <h2>Software Engineer Intern</h2>
+                    <small>May 2024 - Aug 2024</small>
+                    <p>Attended daily stand ups, utilized version control, and developed an API with C# that utilized Azure functions to monitor incoming user requests for government well data 
+                        records and perform garbage collection of Azure storage</p>
+                        <div class="spoken-icon">
+                            <a href="https://www.canva.com/" target="_blank">
+                                <i class="uil uil-megaphone"></i> 
+                            </a>
+                        </div>  
+                    <span class="experience-right-container-arrow"></span>
+
+                </div>
+            </div> 
+
+            <div class = "experience experience-left-container">
+                <img src = "assets/images/chevron.png">
+                <div class = "experience-text-box">
+                    <h2>Software Engineer Intern</h2>
+                    <small>May 2023 - Aug 2023</small>
+                    <p>Developed a media responsive app that utilized CRUD operations to improve data management and accessibility of gemba walk notes for 400+ staff members, utilizing Blazor framework, C#, verision control, and Azure storage
+                    </p>
+                    <span class="experience-left-container-arrow"></span>
+                </div>
+            </div> 
+
+            <div class = "experience experience-right-container">
+                <img src = "assets/images/LSU-logo.png">
+                <div class = "experience-text-box">
+                    <h2>CSC Lab Student Worker</h2>
+                    <small>Sept 2021 - May 2024</small>
+                    <p>Ensures desktop computers' software and hardware functionality and monitors students' usage. 
+                        Cleans lab tables and white boards, updates software, and follows safety protocols for opening/closing labs.</p>
+                       
+                    <span class="experience-right-container-arrow"></span>
+
+                </div>
+            </div> 
+
+            
+          
+
+        </div>
+     </section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+
+       <section class="section" id="projects">
+          <div class="top-header">
+              <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-briefcase-alt"></i>
+                    <h3>Project 1</h3>
+                    <label>JavaScript, HTML, CSS</label>
+                </div>
+                <div class="project-overlay">
+                    <!-- <div class ="project-text"> -->
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                    <!-- </div>     -->
+                    </p>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-users-alt"></i>
+                    <h3>Project 2</h3>
+                    <label>JavaScript, HTML, CSS</label>
+                </div>
+                <div class="project-overlay">
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        </p>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-briefcase-alt"></i>
+                    <h3>Project 3</h3>
+                    <label>JavaScript, HTML, CSS</label>
+                </div>
+                <div class="project-overlay">
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        </p>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-users-alt"></i>
+                    <h3>Project 4</h3>
+                    <label>JavaScript, HTML, CSSs</label>
+                </div>
+                <div class="project-overlay">
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        </p>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-briefcase-alt"></i>
+                    <h3>Project 5</h3>
+                    <label>JavaScript, HTML, CSS</label>
+                </div>
+                <div class="project-overlay">
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        </p>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-content">
+                    <i class="uil uil-users-alt"></i>
+                    <h3>Project 6</h3>
+                    <label>JavaScript, HTML, CSS</label>
+                </div>
+                <div class="project-overlay">
+                    <div class = description>
+                    <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah blah blah blah blah blah blah blah blah blah 
+                        blah blah blah bblah blah blah blah blah blah blah blah blah blah blah blah 
+                        
+                        </p>
+                    </div>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="button demo-button">Demo</a>
+                    <a href="#" class="button repo-button">Repo</a>
+                </div>
+            </div>
+
+          </div>
+       </section>
+
+       
+
+    </main>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        
+       
+        <div class="footer-social-icons">
+           
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Shelby Antill</a></p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
