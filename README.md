@@ -1,1 +1,0 @@
-# shelbyantillcxc.github.io
