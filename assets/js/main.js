@@ -58,11 +58,6 @@ sr.reveal('.social_icons',{delay: 200})
 sr.reveal('.featured-image',{delay: 300})
 
 
-sr.reveal('.bar',{delay: 300})
-sr.reveal('.spoken-content',{delay: 300})
-
-
-sr.reveal('.involvement-container',{delay: 300})
 /* -- PROJECT BOX -- */
 sr.reveal('.project-container',{interval: 100})
 
@@ -196,37 +191,3 @@ sections.forEach(current =>{
 }
 
 window.addEventListener('scroll', scrollActive)
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Select all the list items in the .bar list
-  const barItems = document.querySelectorAll('.bar li');
-
-  // Event listener for each bar item
-  barItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-          // Remove the 'active' class from all items
-          barItems.forEach(function(barItem) {
-              barItem.classList.remove('active');
-          });
-
-          // Add 'active' class to the clicked item
-          item.classList.add('active');
-
-          // Get video source and description from the clicked item's data attributes
-          const videoSource = item.getAttribute('data-video');
-          const description = item.getAttribute('data-description');
-
-          // Update the video player with the new video source
-          const videoElement = document.getElementById('spokenVideo');
-          const videoSourceElement = document.getElementById('videoSource');
-          videoSourceElement.src = videoSource;
-          videoElement.load(); // Reload the video player with the new source
-
-          // Update the description text
-          const descriptionElement = document.getElementById('spokenDescription');
-          descriptionElement.textContent = description;
-      });
-  });
-});
-
