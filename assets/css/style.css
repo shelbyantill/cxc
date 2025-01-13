@@ -99,14 +99,14 @@ nav{
    position: relative;
 }
 .nav-name{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
-    color: var(--text-color-third);
+    color: var(--first-color);
 }
 .nav-logo span{
     position: absolute;
     top: -15px;
-    right: -20px;
+    right: -5px;
     font-size: 5em;
     color: var(--text-color-second);
 }
@@ -236,11 +236,12 @@ nav{
 }
 .image{
     margin: auto 0;
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
+    margin-top: 20px;
 }
 .image img{
     width: 380px;
@@ -283,6 +284,7 @@ nav{
     justify-content: space-between;
     width: 100%;
     gap: 50px;
+    margin-top:60px;
 }
 .col{
     display: flex;
@@ -312,7 +314,23 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
-.about-info{
+
+/* Centering the image container using flexbox */
+.about-img {
+    display: flex;                  /* Enable flexbox */
+    justify-content: center;        /* Center horizontally */
+    align-items: center;            /* Center vertically */
+    width: 100%;                    /* Ensure the div takes up full width */
+    height: 100%;                   /* Ensure the div takes up full height (optional, depending on layout) */
+}
+
+/* Styling the image itself */
+
+
+
+/* ----- ABOUT INFO (Container) ----- */
+
+.about-info {
     position: relative;
     display: flex;
     align-items: center;
@@ -323,7 +341,10 @@ h3{
     background: var(--color-white);
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
+   
+  
 }
+
 .about-info p{
     text-align: center;
     font-size: 15px;
@@ -417,6 +438,7 @@ h3{
 
 
 /* ----- EXPERIENCE BOX ----- */
+
 .timeline{
 	position: relative;
 	max-width: 1200px;
@@ -424,42 +446,23 @@ h3{
 	
 }
 .experience{
-	padding: 10px 50px;
-	position: relative;
-	width: 50%;
-	animation: movedown 1s linear forwards;
-	opacity: 0;
+	display: flex;           /* Enable flexbox layout */
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: flex-start;  /* Vertically align children (optional) */
+    width: 100%;    
+    margin-top: 40px;
 }
-
-.spoken-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
+.experience .timeline-image{
+    width: 40px; /* Set the width of the image */
+    height: auto;
     border-radius: 50%;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    position: absolute; /* Position the icon absolutely */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    background-color: var(--second-color); /* Background color to ensure visibility */
-	color:#fff;
-	
-
-	
-}
-.spoken-icon a {
-    text-decoration: none;
-    color: inherit; /* Ensure the icon color inherits from the .icon class */
-	
-    /* Adjust size as needed */
+    left: 50%; /* Center the image horizontally */
+    z-index: 10;
+    margin-top: 40px;
+    
 }
 
-.spoken-icon:hover {
-    color: var(--first-color); /* Change color on hover */
-	background-color: var(--color-white);
-}
+
 
 @keyframes movedown{
 	0%{
@@ -495,9 +498,12 @@ h3{
     color: var(--second-color);
     font-size: 15px;
     z-index: 1;
+    
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
 }
+
+
 
 .experience-text-box h2{
 	padding-right: 24px;
@@ -527,27 +533,42 @@ h3{
     outline: none;
 }
 
-
-
-.experience-left-container{
-	left:0;
+.experience-image-box{
+    
+    background: #fff;
+    position: relative;
+    color: var(--second-color);
+    font-size: 15px;
+    z-index: 1;
+    
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
 }
 
-.experience-right-container{
-	left:50%;
+.experience-left-container,
+.experience-right-container {
+    width: 50%; /* Each container takes up 50% of the width */
+    padding: 10px; /* Add some padding for spacing */
 }
 
-.experience img{
-	position: absolute;
-	width: 40px;
-	border-radius: 50%;
-	right:-20px;
-	top: 32px;
-	z-index: 10;
+/* Optional: Make sure the containers have some margin to separate them slightly */
+.experience-left-container {
+    padding-right: 40px;  /* Optional: Space on the right side of the left container */
 }
-.experience-right-container img{
-	left: -20px;
+
+.experience-right-container {
+    padding-left: 40px;  /* Optional: Space on the left side of the right container */
 }
+.experience-right-container img,  .experience-left-container img{
+    width: 100%;       /* Make the image take up the full width of the container */
+    height: auto;      /* Maintain aspect ratio */
+   border-radius: 15px;
+}
+
+
+
+
+
 
 .timeline::after{
 	content: '';
@@ -585,6 +606,7 @@ h3{
 	display: inline-block;
 	 color: #777;
 	margin-bottom: 15px;
+    
 }
 
 
@@ -640,9 +662,7 @@ h3{
 .experience-right-container{
 	left:0;
 }
-.experience-left-container img, .experience-right-container img{
-	left: 10px;
-}
+
 
 .experience-left-container-arrow, .experience-right-container-arrow{
 	border-right: 15px solid #fff;
@@ -655,12 +675,14 @@ h3{
 
 }
 
+
+
 /* ----- PROJECTS BOX ----- */
 .project-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -668,130 +690,78 @@ h3{
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 30%;
-    height: 250px;
+    height: 700px; /* Make the card longer */
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
-    transition: .4s;
-    cursor: pointer;
-	
 }
 
 .project-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    transition: color .4s;
-	
-	
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.project-box i {
-    font-size: 50px;
-    color: var(--first-color);
-    margin-bottom: 25px;
-    transition: color .4s;
+.video-player iframe {
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .project-box h3 {
-    margin: 10px 0;
+    margin: 5px;
     color: #333; /* Default color for project title */
-    transition: color .4s;
 }
 
-.project-box label {
-    font-size: 15px;
-    color: #777; /* Default color for skills text */
-    transition: color .4s;
+.project-box p {
+    margin: 4px;
 }
 
-.project-overlay {
+.project-box i {
+    font-size: small;
+    color: var(--first-color);
+    margin-bottom: 15px;
+}
+
+.project-box .project-description {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.project-box .project-buttons {
     position: absolute;
-    top: 0;
-    left: 0;
-	font-size: 12px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark background for overlay */
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity .4s;
-    padding: 20px;
-    text-align: center;
-	
-}
-
-.project-overlay p{
-	padding-bottom: 40px;
-	
-}
-
-
-.project-box:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-box:hover .project-content {
-    color: rgba(109, 105, 105, 0.021); /* Fade the text color */
-}
-
-.project-box:hover .project-content i,
-.project-box:hover .project-content h3,
-.project-box:hover .project-content label {
-    color: rgba(255, 255, 255, 0.05); /* Fade color for icon, title, and skills text */
-}
-
-.project-buttons {
-    position: absolute;
-    bottom: 18px; /* Adjust as needed */
+    bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
-    display: none; /* Hidden by default */
+    display: flex;
     gap: 10px;
-	
-
-
 }
 
 .project-buttons .button {
     display: inline-block;
-    padding:  5px 10px;
+    padding: 5px 10px;
     font-size: 14px;
     color: var(--color-white);
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
-    transition: background .3s, color .3s;
-}
-
-.project-buttons .demo-button:hover  {
-	background: var(--third-color);
-}
-.project-buttons .repo-button:hover  {
-	background: #737272;
-	color:#fff;
 }
 
 .project-buttons .demo-button {
     background: var(--first-color); /* Demo button color */
 }
 
-
 .project-buttons .repo-button {
     background: #fff; /* Repo button color */
-	color: var(--second-color);
-}
-
-.project-box:hover .project-buttons {
-    display: flex; /* Show buttons on hover */
+    color: var(--second-color);
 }
 
 
@@ -890,7 +860,7 @@ h3{
     padding: 10px; /* Padding inside the description box */
     font-size: 15px; /*Font size for the description */
     color: #333; /* Text color */
-    text-align: center; /* Align text to the left */
+    text-align: left; /* Align text to the left */
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 1px 16px 1px var(--first-shadow-color);
@@ -927,127 +897,86 @@ h3{
 }
 
 
-/*---------- INVOLVEMENT --------------*/
-
-/* Container for the 2x2 grid (default) */
+/* ----- INVOLVEMENT SECTION ----- */
 .involvement-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
-    gap: 20px;
+    display: flex;
+    flex-direction: column; /* Stack all cards vertically */
+    gap: 20px; /* Space between cards */
     width: 100%;
     margin: 20px auto;
-  }
-  
-  /* Individual involvement box */
-  .involvement-box {
-    position: relative;
+}
+.involvement-content{
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: row;
+}
+
+/* Individual involvement box */
+.involvement-box {
+    display: flex;
+    flex-direction: row-reverse; /* Image on the right side */
+    justify-content: space-between; /* Space out left (text) and right (image) */
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    height: 300px; /* Adjust height */
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
-    transition: transform .4s, box-shadow .4s;
-    cursor: pointer;
-  }
-  
-  /* Content below the image */
-  .involvement-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
     padding: 20px;
-    transition: color .4s;
-  }
-  
-  /* Involvement title and description */
-  .involvement-content h3 {
-    margin: 10px 0;
-    color: #333; /* Default color for involvement title */
-  }
-  
-  .involvement-content label {
-    font-size: 14px;
-    color: #777; /* Skills text */
-  }
-  
-  .involvement-content p {
+}
+
+/* Content area on the left side (text) */
+.involvement-text {
+    flex: 1; /* Take up the left side of the card */
+    text-align: left;
+    padding: 0 20px ; /* Space between text and image */
+}
+
+.involvement-text h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.involvement-text p {
     font-size: 15px;
     color: #555;
-    margin-top: 10px;
-  }
-  
-  /* Overlay with image */
-  .involvement-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+/* Image area on the right side */
+.involvement-image {
+    flex: 1; /* Take up the right side of the card */
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Hidden by default */
-    transition: opacity .4s;
-    z-index: 1; /* Make sure the overlay is behind the text */
-  }
-  
-  .involvement-overlay img {
-    max-width: 100%;
-    height: auto;
-    opacity: 0.4; /* Image starts with opacity */
-    transition: opacity .4s; /* Smooth transition on hover */
-  }
-  
-  /* Hover effect: show overlay and change box style */
-  .involvement-box:hover .involvement-overlay {
-    opacity: 1; /* Show the overlay on hover */
-  }
-  
-  .involvement-box:hover .involvement-overlay img {
-    opacity: 1; /* Make the image fully opaque on hover */
-  }
-  
-  .involvement-box:hover .involvement-content {
-    color: rgba(109, 105, 105, 0.6); /* Fade text color on hover */
-  }
-  
-  /* Hide text on hover */
-  .involvement-box:hover .involvement-content {
-    opacity: 0; /* Hide text by making it invisible */
-  }
-  
-  /* Box hover effect */
-  .involvement-box:hover {
-    transform: scale(1.05); /* Slightly scale the box on hover */
-    box-shadow: 1px 8px 12px 3px var(--first-shadow-color); /* Enhance shadow */
-  }
-  
+}
 
-  
-  /* Media Query for Stacked Layout (2 boxes per row on larger screens) */
-  @media (min-width: 768px) {
+.involvement-image img {
+    width: 100%;
+    height:270px;
+    
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Ensure the cards are stacked vertically on smaller screens */
+@media (max-width: 767px) {
     .involvement-container {
-      grid-template-columns: repeat(2, 1fr); /* Two boxes per row on larger screens */
+        flex-direction: column; /* Stack cards vertically */
     }
-  }
-  
-  /* Media Query for smaller screens (stack boxes vertically) */
-  @media (max-width: 767px) {
-    .involvement-container {
-      grid-template-columns: 1fr; /* One box per row on smaller screens */
-    }
-  
+
     .involvement-box {
-      height: auto; /* Allow height to adjust automatically */
+        flex-direction: column; /* Stack left and right sections vertically */
+        padding: 20px;
     }
-  }
-  
+
+    .involvement-text {
+        padding-right: 0;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .involvement-image {
+        margin-top: 20px; /* Add spacing between text and image */
+    }
+}
 
 /* ----- FOOTER BOX ----- */
 footer{
@@ -1082,6 +1011,7 @@ footer{
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
+    text-align: center;
 }
 
 
@@ -1160,6 +1090,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         gap: 50px;
+        
     }
     .col{
         display: flex;

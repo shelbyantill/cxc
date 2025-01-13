@@ -32,13 +32,13 @@ function headerShadow() {
 
 
 /* ----- TYPING EFFECT ----- */
-var typingEffect = new Typed(".typedText",{
-  strings : ["My name is Shelby!","I am a senior at LSU.", "My major is Computer Science."],
-  loop : true,
-  typeSpeed : 100, 
-  backSpeed : 80,
-  backDelay : 2000
-})
+// var typingEffect = new Typed(".typedText",{
+//   strings : ["My name is Shelby!","I am a senior at LSU.", "My major is Computer Science."],
+//   loop : true,
+//   typeSpeed : 100, 
+//   backSpeed : 80,
+//   backDelay : 2000
+// })
 
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
@@ -50,12 +50,12 @@ const sr = ScrollReveal({
 })
 
 /* -- HOME -- */
-sr.reveal('.featured-text-card',{})
-sr.reveal('.featured-name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
+// sr.reveal('.featured-text-card',{})
+// sr.reveal('.featured-name',{delay: 100})
+// sr.reveal('.featured-text-info',{delay: 200})
+// sr.reveal('.featured-text-btn',{delay: 200})
 sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
+sr.reveal('.about-img',{delay: 300})
 
 
 sr.reveal('.bar',{delay: 300})
