@@ -95,8 +95,13 @@ nav{
     transition: .3s;
     z-index: 100;
 }
+.nav-menu{
+    display: flex;
+}
 .nav-logo{
    position: relative;
+   flex-grow: 1;
+   justify-content: flex-start;
 }
 .nav-name{
     font-size: 25px;
@@ -154,64 +159,9 @@ nav{
     padding-inline: 10vw;
 }
 
-/* ----- FEATURED BOX ----- */
-.featured-box{
-    position: relative;
-    display: flex;
-    height: 100vh;
-    min-height: 700px;
-}
 
-/* ----- FEATURED TEXT BOX ----- */
-.featured-text{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    min-height: 80vh;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 20px;
-}
-.featured-text-card span{
-    background: var(--third-color);
-    color: var(--color-white);
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 5px;
-}
-.featured-name{
-    font-size: 50px;
-    font-weight: 600;
-    color: var(--text-color-second);
-    margin-block: 20px;
-}
-.typedText{
-    
-	font-size: 30px;
-    color: var(--text-color-third);
-}
-.featured-text-info{
-    font-size: 15px;
-    margin-bottom: 30px;
-    color: var(--text-color-second);
-}
-.featured-text-btn{
-    display: flex;
-    gap: 20px;
-}
-.featured-text-btn>.blue-btn{
-    background: var(--first-color);
-    color: var(--color-white);
-}
-.featured-text-btn>.blue-btn:hover{
-    background: var(--first-color-hover);
-}
-.social_icons{
-    display: flex;
-    margin-top: 5em;
-    gap: 30px;
-}
+
+
 .icon{
     display: flex;
     justify-content: center;
@@ -227,69 +177,21 @@ nav{
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
-.featured-image{
-    display: flex;
-    justify-content: right;
-    align-content: center;
-    min-height: 80vh;
-    width: 50%;
-}
-.image{
-    margin: auto 0;
-    width: 360px;
-    height: 360px;
-    border-radius: 55% 45% 55% 45%;
-    overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
-    margin-top: 20px;
-}
-.image img{
-    width: 380px;
-    height: 380px;
-    object-fit: cover;
-}
+
+
 @keyframes imgFloat {
     50%{
         transform: translateY(10px);
         border-radius: 45% 55% 45% 55%;
     }
 }
-.scroll-btn{
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   translate: -50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 150px;
-   height: 50px;
-   gap: 5px;
-   text-decoration: none;
-   color: var(--text-color-second);
-   background: var(--color-white);
-   border-radius: 30px;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-}
-.scroll-btn i{
-    font-size: 20px;
-}
+
 
 /* ----- MAIN BOX ----- */
 .section{
     padding-block: 5em;
 }
-.row{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 50px;
-    margin-top:60px;
-}
-.col{
-    display: flex;
-    width: 50%;
-}
+
 
 
 
@@ -315,6 +217,32 @@ h3{
 
 /* ----- ABOUT INFO ----- */
 
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    margin-top:60px;
+    max-width: 1200px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 360px;
+    height: 360px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+    margin-top: 20px;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
 /* Centering the image container using flexbox */
 .about-img {
     display: flex;                  /* Enable flexbox */
@@ -324,11 +252,7 @@ h3{
     height: 100%;                   /* Ensure the div takes up full height (optional, depending on layout) */
 }
 
-/* Styling the image itself */
 
-
-
-/* ----- ABOUT INFO (Container) ----- */
 
 .about-info {
     position: relative;
@@ -341,8 +265,6 @@ h3{
     background: var(--color-white);
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
-   
-  
 }
 
 .about-info p{
@@ -362,7 +284,6 @@ h3{
     background: var(--first-color-hover);
 }
 
-/* ----- Education BOX ----- */
 
 .education-box {
     position: relative;
@@ -436,60 +357,124 @@ h3{
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 1211px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+   
+    
+    .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-info, .contact-info{
+        width: 100%;
+    }
+   
+	
+
+}
+
+@media only screen and (max-width: 1024px){
+    
+    .image, .image img{
+        width: 320px;
+        height: 320px;
+    }
+}
 
 /* ----- EXPERIENCE BOX ----- */
+/* ----- EXPERIENCE BOX ----- */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
 
-.timeline{
-	position: relative;
-	max-width: 1200px;
-	margin: 100px auto;
-	
-}
-.experience{
-	display: flex;           /* Enable flexbox layout */
+.experience {
+    display: flex;
     justify-content: center; /* Center the child elements horizontally */
-    align-items: flex-start;  /* Vertically align children (optional) */
-    width: 100%;    
+    align-items: flex-start; /* Vertically align children */
+    width: 100%;
     margin-top: 40px;
+    position: relative; /* Ensure proper positioning */
 }
-.experience .timeline-image{
+
+.experience .timeline-image {
     width: 40px; /* Set the width of the image */
     height: auto;
-    border-radius: 50%;
-    left: 50%; /* Center the image horizontally */
+    border-radius: 2%;
+    position: relative;
+    top: 40px;
+    left: 2%; /* Center the logo in the middle */
+    transform: translateX(-50%); 
     z-index: 10;
-    margin-top: 40px;
-    
 }
 
-
-
-@keyframes movedown{
-	0%{
-		opacity: 1;
-		transform: translateY(-30px);
-		
-	}
-	100%{
-		opacity: 1;
-		transform: translateY(0px);
-		
-	}
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
-.experience:nth-child(1){
-	animation-delay: 0s;
-}
-.experience:nth-child(2){
-	animation-delay: 1s;
-}
-.experience:nth-child(3){
-	animation-delay: 2s;
-}
-.experience:nth-child(4){
-	animation-delay: 3s;
+.experience:nth-child(1) {
+    animation-delay: 0s;
 }
 
+.experience:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.experience:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.experience:nth-child(4) {
+    animation-delay: 3s;
+}
 
 .experience-text-box {
     padding: 20px 30px;
@@ -498,15 +483,12 @@ h3{
     color: var(--second-color);
     font-size: 15px;
     z-index: 1;
-    
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
 }
 
-
-
-.experience-text-box h2{
-	padding-right: 24px;
+.experience-text-box h2 {
+    padding-right: 24px;
 }
 
 .experience-button {
@@ -515,32 +497,30 @@ h3{
     right: 20px;
     padding: 2px 6px;
     font-size: 14px;
-    background-color: var(--first-color); /* Change this to your preferred color */
+    background-color: var(--first-color);
     color: #fff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none; /* Remove underline from the link */
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .experience-button:hover {
-    background-color: #0056b3; /* Change this to your preferred hover color */
+    background-color: #0056b3;
 }
 
 .experience-button:focus {
     outline: none;
 }
 
-.experience-image-box{
-    
+.experience-image-box {
     background: #fff;
     position: relative;
     color: var(--second-color);
     font-size: 15px;
     z-index: 1;
-    
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
 }
@@ -551,7 +531,6 @@ h3{
     padding: 10px; /* Add some padding for spacing */
 }
 
-/* Optional: Make sure the containers have some margin to separate them slightly */
 .experience-left-container {
     padding-right: 40px;  /* Optional: Space on the right side of the left container */
 }
@@ -559,128 +538,155 @@ h3{
 .experience-right-container {
     padding-left: 40px;  /* Optional: Space on the left side of the right container */
 }
-.experience-right-container img,  .experience-left-container img{
-    width: 100%;       /* Make the image take up the full width of the container */
-    height: auto;      /* Maintain aspect ratio */
-   border-radius: 15px;
+
+.experience-right-container img,
+.experience-left-container img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
 }
 
-
-
-
-
-
-.timeline::after{
-	content: '';
-	position: absolute;
-	width: 6px;
-	height: 100%;
-	background: #fff;
-	top: 0;
-	left: 50%;
-	margin-left: -3px;
-	z-index: -1;
-	animation: moveline 6s linear forwards;
-	box-shadow: 1px 8px 10px 2px var(--second-shadow-color);
-	
+/* Timeline line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+    box-shadow: 1px 8px 10px 2px var(--second-shadow-color);
 }
 
-/* @keyframes moveline{
-	0%{
-		height: 0;
-		box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-
-	}
-	100%{
-		height: 100%;
-		box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-
-	}
-} */
-
-.experience-text-box h2{
-	font-weight: 600;
+/* Text box heading */
+.experience-text-box h2 {
+    font-weight: 600;
 }
 
-.experience-text-box small{
-	display: inline-block;
-	 color: #777;
-	margin-bottom: 15px;
-    
+.experience-text-box small {
+    display: inline-block;
+    color: #777;
+    margin-bottom: 15px;
 }
 
-
-
-
-.experience-left-container-arrow{
-	height:0;
-	width:0;
-	position: absolute;
-	top: 28px;
-	z-index:1;
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid #fff;
-	right: -15px;
+/* Arrow styles */
+.experience-left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
 }
 
-.experience-right-container-arrow{
-	height:0;
-	width: 0;
-	position: absolute;
-	top: 28px;
-	z-index: 1;
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-right: 15px solid #fff;
-	left: -15px;
+.experience-right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
 }
 
-@media screen and (max-width: 800px ){
-.timeline{
-	margin: 50px auto;
-	
-}
-.timeline::after{
-	left: 31px;
-}
-.experience{
-	width: 100%;
-	padding-left: 80px;
-	padding-right: 25px;
+/* --------- Media Queries --------- */
 
-}
-.experience-text-box{
-	font-size: 15px;
-	
-}
+/* For screen sizes less than 800px */
+@media screen and (max-width: 1000px) {
+    .timeline {
+        margin: 50px auto;
+    }
 
+    .timeline::after {
+        left: 31px;
+    }
 
-.experience-text-box small{
-	margin-bottom: 10px;
-}
-.experience-right-container{
-	left:0;
-}
+    .experience {
+        flex-direction: column; /* Stack the elements vertically */
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        position: relative;
+    }
 
+    .experience-text-box {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
 
-.experience-left-container-arrow, .experience-right-container-arrow{
-	border-right: 15px solid #fff;
+    .experience-left-container,
+    .experience-right-container {
+        width: 100%; /* Full width for smaller screens */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .experience-left-container-arrow,
+    .experience-right-container-arrow {
+        border-right: 15px solid #fff;
 	border-left: 0;
 	left: -15px;
+    }
 
+    /* Move Chevron and LSU logo to the left side */
+    .experience .timeline-image {
+        
+        top: 40px;
+        left: -7%; /* Align logos to the left */
+        transform: translateX(-50%);
+       
+        width: 40px; /* Reduce the size of the images */
+        height: auto;
+    }
+
+    /* Stack images below the text boxes */
+    .experience-left-container img,
+    .experience-right-container img {
+        width: 100%; /* Limit image size */
+        margin: 20px auto;
+    }
+
+    .experience-text-box {
+        margin-left: 10px; /* Add some left margin to avoid text touching the side */
+    }
 }
 
-
-
+@media screen and (max-width: 800px) {
+.experience .timeline-image {
+        
+    top: 40px;
+    left: -10%; /* Align logos to the left */
+    transform: translateX(-50%);
+   
+    width: 40px; /* Reduce the size of the images */
+    height: auto;
 }
-
-
+}
+@media screen and (max-width: 600px) {
+    .experience .timeline-image {
+            
+        top: 40px;
+        left: -12%; /* Align logos to the left */
+        transform: translateX(-50%);
+       
+        width: 40px; /* Reduce the size of the images */
+        height: auto;
+    }
+    }
 
 /* ----- PROJECTS BOX ----- */
 .project-container {
     display: flex;
     width: 100%;
+    max-width: 1200px;
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
@@ -693,7 +699,7 @@ h3{
     align-items: flex-start;
     flex-direction: column;
     width: 30%;
-    height: 700px; /* Make the card longer */
+    height: auto; /* Auto height to fit content */
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -709,32 +715,51 @@ h3{
     align-items: center;
 }
 
-.video-player iframe {
-    border-radius: 10px;
+/* Container for video player */
+.video-player {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
     margin-bottom: 20px;
 }
 
-.project-box h3 {
-    margin: 5px;
-    color: #333; /* Default color for project title */
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
+/* Project Box Title */
+.project-box h3 {
+    margin: 5px;
+    color: #333;
+}
+
+/* Project Box Paragraph */
 .project-box p {
     margin: 4px;
 }
 
+/* Project Icon */
 .project-box i {
     font-size: small;
     color: var(--first-color);
     margin-bottom: 15px;
 }
 
+/* Description inside the project box */
 .project-box .project-description {
     color: #555;
     font-size: 14px;
     line-height: 1.6;
 }
 
+/* Buttons inside project box */
 .project-box .project-buttons {
     position: absolute;
     bottom: 18px;
@@ -744,6 +769,7 @@ h3{
     gap: 10px;
 }
 
+/* Button styling */
 .project-buttons .button {
     display: inline-block;
     padding: 5px 10px;
@@ -755,15 +781,43 @@ h3{
     text-align: center;
 }
 
+/* Demo button */
 .project-buttons .demo-button {
-    background: var(--first-color); /* Demo button color */
+    background: var(--first-color);
 }
 
+/* Repo button */
 .project-buttons .repo-button {
-    background: #fff; /* Repo button color */
+    background: #fff;
     color: var(--second-color);
 }
 
+/* Responsive Design for medium screens */
+@media only screen and (max-width: 1200px) {
+    .project-container {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 80%;
+        height: auto; /* Fit content */
+    }
+
+    .video-player {
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+}
+
+/* Responsive Design for smaller screens */
+@media only screen and (max-width: 540px) {
+    .project-box {
+        width: 100%;
+    }
+
+    .video-player {
+        padding-top: 56.25%; /* Keep aspect ratio consistent */
+    }
+}
 
 /* ---------SPOKEN SAMPLES----------- */
 .bar{
@@ -828,11 +882,11 @@ h3{
     align-items: flex-start;
     margin-top: 30px;
     gap: 20px; /* Add space between video and description */
-    /*width: 100%; /* Ensure the container spans the entire width */
-    /*max-width: 500px; /* Max-width for large screens */
+    width: 100%; /* Ensure the container spans the entire width */
+    max-width: 1400px; 
     margin: 0 auto; /* Center the container horizontally */
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Box for video */
@@ -877,7 +931,7 @@ h3{
 }
 
 /* Responsive behavior for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .spoken-content {
         flex-direction: column; /* Stack video and description vertically */
         gap: 10px; /* Less gap between video and description */
@@ -898,16 +952,20 @@ h3{
 
 
 /* ----- INVOLVEMENT SECTION ----- */
+/* Container for the involvement section */
 .involvement-container {
     display: flex;
     flex-direction: column; /* Stack all cards vertically */
     gap: 20px; /* Space between cards */
     width: 100%;
     margin: 20px auto;
+    max-width: 1000px;
 }
-.involvement-content{
+
+/* Content inside each box */
+.involvement-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Default row layout */
 }
 
 /* Individual involvement box */
@@ -924,11 +982,11 @@ h3{
     padding: 20px;
 }
 
-/* Content area on the left side (text) */
+/* Content area (text) */
 .involvement-text {
     flex: 1; /* Take up the left side of the card */
     text-align: left;
-    padding: 0 20px ; /* Space between text and image */
+    padding: 0 20px; /* Space between text and image */
 }
 
 .involvement-text h3 {
@@ -941,7 +999,7 @@ h3{
     color: #555;
 }
 
-/* Image area on the right side */
+/* Image area */
 .involvement-image {
     flex: 1; /* Take up the right side of the card */
     display: flex;
@@ -951,32 +1009,50 @@ h3{
 
 .involvement-image img {
     width: 100%;
-    height:270px;
-    
+    height: 270px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-/* Ensure the cards are stacked vertically on smaller screens */
-@media (max-width: 767px) {
-    .involvement-container {
-        flex-direction: column; /* Stack cards vertically */
-    }
-
+/* For smaller screens */
+@media (max-width: 900px) {
     .involvement-box {
-        flex-direction: column; /* Stack left and right sections vertically */
-        padding: 20px;
+        flex-direction: column; /* Stack text and image vertically */
+    }
+    .involvement-content {
+        flex-direction: column;
     }
 
     .involvement-text {
+        order: 1; /* Text above the image */
+        text-align: center; /* Center text */
         padding-right: 0;
-        text-align: center; /* Center text on small screens */
     }
 
     .involvement-image {
+        order: 2; /* Image below the text */
         margin-top: 20px; /* Add spacing between text and image */
     }
+
+    .involvement-image img {
+        height: 200px; /* Adjust image size */
+    }
 }
+
+/* For very small screens */
+@media (max-width: 540px) {
+    .involvement-box {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .involvement-image img {
+        height: 180px; /* Further reduce image height */
+    }
+}
+
+
+
+
 
 /* ----- FOOTER BOX ----- */
 footer{
@@ -1015,115 +1091,3 @@ footer{
 }
 
 
-/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
-@media only screen and (max-width: 1024px){
-    .featured-text{
-        padding: 0;
-    }
-    .image, .image img{
-        width: 320px;
-        height: 320px;
-    }
-}
-
-/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
-@media only screen and (max-width: 1000px) {
-.featured-image{
-	order: 1;
-	justify-content: center;
-	min-height: 150px;
-	width: 100%;
-	margin-top: 65px;
-}
-}
-@media only screen and (max-width: 900px) {
-    .nav-button{
-        display: none;
-    }
-    .nav-menu.responsive{
-        left: 0;
-    }
-    .nav-menu{
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(20px);
-        width: 100%;
-        min-height: 450px;
-        height: 90vh;
-        transition: .3s;
-    }
-    .nav_menu_list{
-        flex-direction: column;
-    }
-    .nav-menu-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .featured-box{
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-    }
-    .featured-text{
-        width: 100%;
-        order: 2;
-        justify-content: center;
-        align-content: flex-start;
-        min-height: 60vh;
-    }
-    .social_icons{
-        margin-top: 2em;
-    }
-    
-    .image, .image img{
-        width: 150px;
-        height: 150px;
-    }
-    .row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-        
-    }
-    .col{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    .about-info, .contact-info{
-        width: 100%;
-    }
-    .project-container{
-        justify-content: center;
-		
-    }
-    .project-box{
-        width: 80%;
-    }
-	
-
-}
-
-/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
-
-@media only screen and (max-width: 540px){
-    .featured-name{
-        font-size: 40px;
-    }
-    .project-box{
-        width: 100%;
-    }
-    .form-inputs{
-        flex-direction: column;
-    }
-    .input-field{
-        width: 100%;
-    }
-}
