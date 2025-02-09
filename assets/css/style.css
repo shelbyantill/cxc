@@ -252,9 +252,7 @@ h3{
     height: 100%;                   /* Ensure the div takes up full height (optional, depending on layout) */
 }
 
-#about{
-    margin:auto;
-}
+
 
 .about-info {
     position: relative;
@@ -689,10 +687,11 @@ h3{
     display: flex;
     width: 100%;
     max-width: 1200px;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin:auto;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .project-box {
@@ -711,6 +710,7 @@ h3{
 
 .project-content {
     padding: 15px;
+    
     width: 100%;
     text-align: left;
     display: flex;
