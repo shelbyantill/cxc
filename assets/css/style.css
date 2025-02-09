@@ -229,6 +229,7 @@ h3{
     align-items: center; 
     width: 100%;
     gap: 60px;
+    margin: 0 auto;
     margin-top:60px;
     max-width: 1200px;
     
