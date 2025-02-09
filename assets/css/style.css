@@ -218,6 +218,9 @@ h3{
 /* ----- ABOUT INFO ----- */
 .about{
     margin: 0 auto;
+    
+    justify-content: center; /* This will center the content horizontally */
+    align-items: center; 
 }
 .row{
     display: flex;
