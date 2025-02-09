@@ -216,6 +216,16 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
+
+@media only screen and (min-width: 1600px) {
+    .nav-logo {
+        margin-right: 20px; /* Adjust this value to reduce the space between the logo and the navigation links */
+    }
+    
+    .nav-menu {
+        margin-left: 0; /* Remove any additional left margin if necessary */
+    }
+}
 .about{
     margin: 0 auto;
     
